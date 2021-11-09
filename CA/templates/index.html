@@ -1,0 +1,29 @@
+<html>
+<style>
+h1 {text-align: center;}
+form{text-align: center;} 
+p {text-align: center;}
+div {
+  background-image: url('newspaper.jpg');
+}
+</style>
+
+<h1 style="font-size:60px;">Translator and Sentiment Analyzer</h1>
+<body style="background-color:powderblue;">
+<p>This is a free to use translator.You can use the translate button to translate your text to any language of your choice.Enter the target and source language. You can also check sentriment. Just enter source language for that</p>
+<form method="post">
+Text <input type="text" name="texttranslate"><br>
+Source Language <input type="text" name="slanguage"><br>
+Target Language <input type="text" name="tlanguage"><br>
+<button type="submit" formaction="/sound">Translate</button>
+<button type="submit" formaction="/sentiment">Sentiment</button>
+</form>
+{% if conversion %}
+<h2>{{ conversion }}</h2>
+{% endif %}
+
+{% if result %}
+<h2>{{ result }}</h2>
+{% endif %}
+</body>
+</html>
